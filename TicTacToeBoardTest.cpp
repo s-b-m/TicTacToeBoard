@@ -20,3 +20,29 @@ TEST(TicTacToeBoardTest, unitTestName)
 	ASSERT_TRUE(true);
 }
 */
+TEST(TicTacToeBoardTest, swapToX)
+{
+  TicTacToeBoard temp;
+  temp.toggleTurn();
+  ASSERT_EQ(temp.toggleTurn(), 'X');
+}
+
+TEST(TicTacToeBoardText, swapToY)
+{
+  TicTacToeBoard temp;
+  ASSERT_EQ(temp.toggleTurn(), 'O');
+}
+
+TEST(TicTacToeBoardTest, swapToNull)
+{
+  TicTacToeBoard temp;
+  ASSERT_NE(temp.toggleTurn(), ' ');
+}
+
+TEST(TicTacToeBoardTest, swapToInvalid)
+{
+  TicTacToeBoard temp;
+  ASSERT_NE(temp.toggleTurn(), '?');
+}
+
+

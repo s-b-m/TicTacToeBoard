@@ -19,7 +19,11 @@ TicTacToeBoard::TicTacToeBoard()
 **/
 Piece TicTacToeBoard::toggleTurn()
 {
-  return Invalid;
+  if(turn == 'X'){
+    turn = 'O';
+  }
+  turn = 'X';
+  return turn;
 }
 
 /**
